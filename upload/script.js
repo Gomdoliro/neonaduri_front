@@ -45,5 +45,37 @@ document.addEventListener("DOMContentLoaded", () => {
         if (filesArray.length > 0) {
             uploadButton.style.display = 'none';
         }
+    } 
+});
+
+document.getElementById('plus').addEventListener('click', function() {
+    const tagInput = document.getElementById('tag');
+    const tagValue = tagInput.value.trim();
+    const tagsList = document.querySelector('.tags_list');
+    const yetDiv = document.querySelector('.yet');
+
+    if (tagValue) {
+        const tagElement = document.createElement('div');
+        tagElement.className = 'tag_item';
+        tagElement.innerHTML = `
+            ${tagValue} 
+            <span class="delete_tag" onclick="removeTag(this)">x</span>
+        `;
+        tagsList.appendChild(tagElement);
+
+        yetDiv.style.display = 'none';
+
+        tagInput.value = '';
     }
 });
+
+function removeTag(deleteButton) {
+    const tagsList = document.querySelector('.tags_list');
+    const yetDiv = document.querySelector('.yet');
+    
+    deleteButton.parentElement.remove();
+
+    if (tagsList.children.length === 0) {
+        yetDiv.style.display = 'block';
+    }
+}

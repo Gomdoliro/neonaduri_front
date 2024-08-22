@@ -3,7 +3,6 @@
     margin: 0;
 }
 body {
-    font-family: "Noto Sans KR", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,7 +10,7 @@ body {
     height: 100vh;
     background-color: #DEDEDE;
 }
-.box {
+.box { 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,7 +23,7 @@ body {
 .space {
     width: 74%;
     height: 88%;
-    margin-top: 8%;
+    margin-top: 4%;
     overflow: hidden;
 }
 [id=maintitle] {
@@ -79,27 +78,65 @@ textarea {
     font-family: "Noto Sans KR", sans-serif;
 }
 .tag-container {
-    position: relative;
-    width: 95%;
-    margin: 1%;
+    display: flex;
+    align-items: center;
+    width: 80%;
 }
 #tag {
-    width: 87%;
-    padding: 2%;
-    padding-right: 10%; 
+    width: 96.5%;
+    padding: 1.5%;
     font-size: 18px;
-    height: 8%;
+    height: 6%;
     border-radius: 8px;
     border: 2px solid #999;
     background-color: #e6e6e6;
     font-family: "Noto Sans KR", sans-serif;
 }
 #plus {
-    position: absolute;
-    padding-right: 20%;
-    font-size: 20px;
+    margin-left: -8%;
+    font-size: 25px;
     border: 0px;
     background-color: transparent;
     cursor: pointer;
+    font-family: "Noto Sans KR", sans-serif;
+}
+.yet{
+    display: flex;
+    padding-top: 5%;
+    padding-bottom: 4%;
+    color: #999;
+    font-size: 20px;
+    font-family: "Noto Sans KR", sans-serif;
+}
+.button_container {
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 10px; 
+}
+.action_button {
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    width: 25%;
+    height: 20%;
+    background-color: #9747FF;
+    color: white;
+    border: 0px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 4px 0px #0000007f;
+}
+.action_button:hover {
+    background-color: #d4d4d4;
+}
+#back {
+    background-color: #999;
+    font-size: 22px;
+    cursor: pointer;
+    font-family: "Noto Sans KR", sans-serif;
+}  
+#upload {
+    font-size: 22px;
+    cursor: pointer;
+    background-color: #9747FF;
     font-family: "Noto Sans KR", sans-serif;
 }
